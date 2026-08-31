@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Schwerdtfeger - Portfolio</title>
+</head>
+<body>
+    <!-- TODO: Deploy this website -->
+    <header>
+        <h1>Justin Schwerdtfeger's Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About</h2>
+            <p>Hello! I'm a Computer Science student at the University of Texas at Dallas, and head of engineering at Nebula Labs.</p>
+            <figure>
+                <img src="https://via.placeholder.com/150" alt="Blank placeholder profile picture">
+                <figcaption>Portrait of Me</figcaption>
+            </figure>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <article>
+                <h3>UTD Clubs</h3>
+                <p>A website to discover UTD student organizations, or showcase your own. </p>
+                <a href="https://clubs.utdnebula.com/">Learn More</a>
+                <ul>
+                    <li>Featuring 300+ organizations at UTD</li>
+                    <li>AI powered club match form to find the best club for you</li>
+                    <li>SSR via Next.js and deployed on Vercel</li>
+                </ul>
+            </article>
+
+
+            <article>
+                <h3>Nebula API</h3>
+                <p>An API with data from a variety of UTD sources </p>
+                <a href="https://api.utdnebula.com/swagger/index.html#/">Learn More</a>
+                <ul>
+                    <li>50+ API consumers from 10+ UTD sources</li>
+                    <li>Developed with Go and MongoDB, deployed on Google Cloud</li>
+                    <li>Automated CI/CD pipeline with automated testing and deployment</li>
+                </ul>
+            </article>
+            <aside>
+                <p>Nebula API powers Nebula Labs' other projects</p>
+            </aside>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <form action="#" method="post">
+                <!-- TODO: Can this be <p>?-->
+                <p>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required>
+                </p>
+                <p>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </p>
+                <p>
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" required></textarea>
+                </p>
+                <p>
+                    <button type="submit">Submit</button>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Justin Schwerdtfeger. All rights reserved.</p>
+        <p>
+            <a href="https://github.com/justinschwerdtfeger" target="_blank">GitHub</a> | 
+            <a href="https://linkedin.com/in/justin-schwerdtfeger" target="_blank">LinkedIn</a>
+        </p>
+    </footer>
+
+</body>
+</html>
