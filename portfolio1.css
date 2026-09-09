@@ -1,0 +1,325 @@
+/* ==========================================================================
+   portfolio.css - Stylesheet for Justin Schwerdtfeger's Portfolio
+   Course: CS 6314 - Exercise 1
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CSS Reset & Box-Sizing
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #1e293b;
+    background-color: #f8fafc;
+}
+
+/* --------------------------------------------------------------------------
+   2. Page Container & Typography
+   -------------------------------------------------------------------------- */
+header,
+main,
+footer {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+h1, h2, h3 {
+    color: #0f172a;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 1.75rem;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+a {
+    color: #2563eb;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+/* Pseudo-class :hover and :focus states for links */
+a:hover {
+    color: #1d4ed8;
+}
+
+a:focus {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   3. Header & Navigation (Flexbox 1D Layout)
+   -------------------------------------------------------------------------- */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e2e8f0;
+    background-color: #ffffff;
+}
+
+/* Child selector: nav > ul */
+nav > ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.25rem;
+}
+
+.nav-list a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #475569;
+    padding: 0.35rem 0.6rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Pseudo-class states on navigation links */
+.nav-list a:hover {
+    color: #0f172a;
+    background-color: #f1f5f9;
+}
+
+.nav-list a:focus {
+    color: #0f172a;
+    background-color: #e2e8f0;
+    outline: 2px solid #2563eb;
+}
+
+/* --------------------------------------------------------------------------
+   4. Main Content & Sections (CSS Box Model)
+   -------------------------------------------------------------------------- */
+.page-content {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.section {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+
+/* About Section Flexbox Layout */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.about-container > p {
+    flex: 1 1 300px;
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+figure {
+    margin: 0;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background-color: #f8fafc;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    margin: 0 auto;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #64748b;
+}
+
+/* --------------------------------------------------------------------------
+   5. Projects Section (CSS Grid Multi-Item Layout)
+   -------------------------------------------------------------------------- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Class selector: .project-card */
+.project-card {
+    padding: 1.5rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background-color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+/* Pseudo-class :hover on project card */
+.project-card:hover {
+    border-color: #94a3b8;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Descendant selector: .project-card ul */
+.project-card ul {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    padding-left: 1.25rem;
+    color: #475569;
+}
+
+/* Descendant selector: .project-card a */
+.project-card a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-weight: 600;
+}
+
+/* Project Aside Note */
+.project-note {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1rem;
+    background-color: #eff6ff;
+    border-left: 4px solid #3b82f6;
+    border-radius: 0 4px 4px 0;
+    color: #1e40af;
+}
+
+.project-note p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* --------------------------------------------------------------------------
+   6. Contact Form Styling
+   -------------------------------------------------------------------------- */
+.contact-form {
+    max-width: 600px;
+}
+
+/* Class selector: .form-group */
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+/* Descendant selectors for form controls */
+.form-group label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #334155;
+    display: inline-block;
+    margin-bottom: 0.35rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.65rem 0.85rem;
+    font-family: inherit;
+    font-size: 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #0f172a;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Pseudo-class :focus states on input and textarea */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* Class selector: .submit-button */
+.submit-button {
+    display: inline-block;
+    background-color: #2563eb;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Pseudo-class states on button */
+.submit-button:hover {
+    background-color: #1d4ed8;
+}
+
+.submit-button:focus {
+    outline: 2px solid #1d4ed8;
+    outline-offset: 2px;
+}
+
+.submit-button:active {
+    transform: scale(0.98);
+}
+
+/* --------------------------------------------------------------------------
+   7. Footer (Flexbox Layout)
+   -------------------------------------------------------------------------- */
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+    border-top: 1px solid #e2e8f0;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.site-footer p {
+    margin: 0;
+}

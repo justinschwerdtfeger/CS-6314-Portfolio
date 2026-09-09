@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Schwerdtfeger - Portfolio</title>
+    <link rel="stylesheet" href="portfolio1.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1>Justin Schwerdtfeger's Portfolio</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <section id="about" class="section">
+            <h2>About</h2>
+            <div class="about-container">
+                <p>Hello! I'm a Computer Science student at the University of Texas at Dallas, and head of engineering at Nebula Labs.</p>
+                <figure>
+                    <img src="https://via.placeholder.com/150" alt="Blank placeholder profile picture">
+                    <figcaption>Portrait of Me</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3>UTD Clubs</h3>
+                    <p>A website to discover UTD student organizations, or showcase your own. </p>
+                    <a href="https://clubs.utdnebula.com/">Learn More</a>
+                    <ul>
+                        <li>Featuring 300+ organizations at UTD</li>
+                        <li>AI powered club match form to find the best club for you</li>
+                        <li>SSR via Next.js and deployed on Vercel</li>
+                    </ul>
+                </article>
+
+                <article class="project-card">
+                    <h3>Nebula API</h3>
+                    <p>An API with data from a variety of UTD sources </p>
+                    <a href="https://api.utdnebula.com/swagger/index.html#/">Learn More</a>
+                    <ul>
+                        <li>50+ API consumers from 10+ UTD sources</li>
+                        <li>Developed with Go and MongoDB, deployed on Google Cloud</li>
+                        <li>Automated CI/CD pipeline with automated testing and deployment</li>
+                    </ul>
+                </article>
+            </div>
+            <aside class="project-note">
+                <p>Nebula API powers Nebula Labs' other projects</p>
+            </aside>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <form class="contact-form" action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="submit-button">Submit</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Justin Schwerdtfeger. All rights reserved.</p>
+        <p>
+            <a href="https://github.com/justinschwerdtfeger" target="_blank">GitHub</a> | 
+            <a href="https://linkedin.com/in/justin-schwerdtfeger" target="_blank">LinkedIn</a>
+        </p>
+    </footer>
+
+</body>
+</html>
